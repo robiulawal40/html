@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>gMap</title>
+</head>
+<body>
+
+  <div class="wreaper">
+    <div class="input-box">
+      <div class="ib-container ib-colored">
+        <h2>Input Map Options </h2>
+      </div>
+
+      <form class="ib-form" action="/action_page.php">
+        <p>
+        <label><b>First Name</b></label>
+        <input name="first" type="text"></p>
+        <p>
+        <label><b>Last Name</b></label>
+        <input name="last" type="text"></p>
+        <p>
+          <label><b>Last Name</b></label>
+          <select name="option">
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+        </p>
+        <p>
+          <label><b>Last Name</b></label> <br />
+          <input type="checkbox" checked="checked">
+          <label>Milk</label> <br />
+          <input type="checkbox" checked="checked">
+          <label>Water</label>
+        </p>
+        <p>
+          <label><b>Last Name</b></label> <br />
+          <input type="radio" name="gender" value="male" checked>
+          <label>Male</label><br />
+          <input type="radio" name="gender" value="female">
+          <label>Female</label>
+        </p>
+
+        <p>
+          <label><b>Last Name</b></label> <br />
+          <textarea>Some text...</textarea>
+        </p>
+        <p>
+          <button class="ib-btn">Register</button>
+        </p>
+      </form>
+    </div>
+    <div class="map-viewport">
+      <div class="gmap">
+         conteent
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="script.js" charset="utf-8"></script>
+</body>
+</html>

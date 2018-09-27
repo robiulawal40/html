@@ -1,0 +1,104 @@
+:root {
+--pc: rgba(0, 0, 0, .1 );
+--sc: #009688;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.wreaper{
+width:100%;
+position: relative;
+background: #fff;
+}
+/* Left gMap input element */
+.input-box{
+max-height: calc( 100% - 20px);
+width: 300px;
+background: var(--pc);
+float: left;
+position: fixed;
+top:10px;
+left:10px;
+box-shadow: 1px 1px 1px 0px rgba(0,0,0, .4);
+padding: 0px;
+overflow-y: scroll;
+}
+.ib-container{
+  background: var(--sc);
+  width: 100%;
+  margin: 0px;
+}
+.ib-container h2{
+  margin: 0px;
+  padding: 20px 0px;
+  text-align: center;
+  color: #fff;
+}
+.ib-form p{
+  padding: 5px 10px;
+}
+.ib-form label, .ib-form input[type='text'], .ib-form select{
+  width: calc(100%);
+}
+.ib-form  input[type='text'] , .ib-form  select, textarea{
+border: 1px solid #ccc;
+height: 2.1rem;
+font-size: 1.1rem;
+color: #ccc;
+}
+input[type=checkbox], input[type=radio] {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  top:.5rem;
+  padding: 0;
+}
+textarea{
+  width: 100%;
+  height: 5rem;
+}
+.ib-form input[type='text']:focus, .ib-form input[type='text']:hover, .ib-form input[type='text']:active, textarea:focus{
+  border: 1px solid var(--sc) !important;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5)!important;
+}
+.ib-btn{
+  background: var(--sc);
+  padding: .5rem 1rem;
+  border: 1px solid var( --sc );
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.ib-btn:hover{
+  box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.8);
+}
+.input-box::-webkit-scrollbar {
+    width: .7rem;
+}
+.input-box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.input-box::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+/* gMap right part*/
+.map-viewport{
+min-height: calc( 100% - 20px ) ;
+width: calc( 100% - 330px );
+background:  rgba(255, 255, 255, .7 );
+border: 0px solid #000;
+float: right;
+position: relative;
+top:10px;
+right:10px
+}
+.gmap{
+  height: 100px;
+  width:100px;
+  background: red;
+}
