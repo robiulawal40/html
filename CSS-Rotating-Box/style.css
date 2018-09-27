@@ -1,0 +1,23 @@
+html, body{
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+.simple_box{
+  width:100px;
+  height: 100px;
+  background: red;
+  display: grid;
+  position: absolute;
+  top:calc( 50% - 50px );
+  left:calc( 50% - 50px );
+  animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+  0%{
+  transform: rotate( 0deg );
+  }
+  100%{
+    transform: rotate( 360deg );
+  }
+}
