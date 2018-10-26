@@ -172,3 +172,50 @@ width: 100%;
 .notification_email button:hover{
   cursor: pointer;
 }
+.right_content{
+position: fixed;
+float: right;
+right:5px;
+top:50%;
+transform: translateY(-50%);
+color: #fff;
+}
+.social ul{
+  list-style: none;
+  font-size: 1.5em;
+  border: 0px solid #455441;
+  float:right;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width:51px;
+  box-shadow: 0px 0px 3px #000;
+}
+.social ul li{
+  list-style: none;
+  border: 0px solid #333;
+  display:table-cell;
+  right:0px;
+  width: 50px;
+  height: 50px;
+  float: right;
+  padding: 10px 10px;
+}
+.social ul li a{
+ color:#fff;
+}
+.facebook{
+  background: #3b5999;
+}
+.twitter{
+background: #55acee;
+}
+.youtube{
+background: #cd201f;
+}
+.google{
+background: #dd4b39;
+}
+.printerest{
+  background: #bd081c;
+}
