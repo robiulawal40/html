@@ -1,3 +1,11 @@
+:root {
+--bg_color: #99393F;
+--upper_content_p: #D6665E;
+--ns_timer:#D6665E;
+--notification_email_input:#D6665E; /* rgba(200,200,200,.82) */
+--notification_email_button: #444; /*#444*/
+--ns_timer_span: #444;
+}
 /* Default Body style */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -66,7 +74,7 @@ body{
    z-index: -2;
 }
 .bg_color{
-  background: rgba(10,86,255,.47);
+  background: var(--bg_color);
   position: absolute;
   width:100%;
   height: 100%;
@@ -109,11 +117,11 @@ padding: 10px
 }
 .upper_content p{
   color:#444;
-  background: rgba(200,200,200,.82);
+  background: var(--upper_content_p );
   padding: 20px;
 }
 .ns_timer{
-  background: rgba(205,205,205,.25);
+  background: var( --ns_timer );
   overflow: hidden;
   color:#fff;
   text-indent: 1em;
@@ -131,9 +139,10 @@ font-size: 5em;
 width: 100%;
 }
 .ns_timer span span{
-  background: #444;
+  background: var( --ns_timer_span );
   box-shadow: 1px 1px 3px #000;
   margin: 0 1px 0 0;
+  padding: 0 5px;
 }
 
 .notification_email{
@@ -148,7 +157,7 @@ width: 100%;
   border: 0px solid #fff;
   width: 20em;
   padding: 10px;
-  background-color:rgba(200,200,200,.82);
+  background-color: var( --notification_email_input );
   color: #fff;
   margin: 0px;
   float: left;
@@ -159,7 +168,7 @@ width: 100%;
 }
 .notification_email button{
   height: 2.5em;
-  background: #444;
+  background: var( --notification_email_button );
   color:#fff;
   border: 1px solid #444;
   margin: 0px;
