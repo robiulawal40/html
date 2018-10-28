@@ -88,5 +88,82 @@ $string = 'abcdef';
 echo $string[0];                 // a
 echo $string[3];                 // d
 echo $string[strlen($string)-1]; // f
-
 ?>
+
+////////////////////////////////////////
+// 4. string implode ( string $glue , array $pieces )
+///////////////////////////////////////
+
+<?php
+$array = array('lastname', 'email', 'phone');
+$comma_separated = implode(",", $array);
+
+echo $comma_separated; // lastname,email,phone
+
+// Empty string when using an empty array:
+var_dump(implode('hello', array())); // string(0) ""
+?>
+
+////////////////////////////////////////
+// 5. array explode ( string $delimiter , string $string [, int $limit = PHP_INT_MAX ] )
+///////////////////////////////////////
+<?php
+// Example 1
+$pizza  = "piece1 piece2 piece3 piece4 piece5 piece6";
+$pieces = explode(" ", $pizza);
+echo $pieces[0]; // piece1
+echo $pieces[1]; // piece2
+
+// Example 2
+$data = "foo:*:1023:1000::/home/foo:/bin/sh";
+list($user, $pass, $uid, $gid, $gecos, $home, $shell) = explode(":", $data);
+echo $user; // foo
+echo $pass; // *
+?>
+
+////////////////////////////////////////
+// 6. array array_merge ( array $array1 [, array $... ] )
+///////////////////////////////////////
+<?php
+$array1 = array("color" => "red", 2, 4);
+$array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
+$result = array_merge($array1, $array2);
+print_r($result);
+?>
+/* Result
+Array
+(
+    [color] => green
+    [0] => 2
+    [1] => 4
+    [2] => a
+    [3] => b
+    [shape] => trapezoid
+    [4] => 4
+)
+*/
+
+////////////////////////////////////////
+// 7. bool sort ( array &$array [, int $sort_flags = SORT_REGULAR ] )
+///////////////////////////////////////
+/*
+SORT_REGULAR - compare items normally (don't change types)
+SORT_NUMERIC - compare items numerically
+SORT_STRING - compare items as strings
+SORT_LOCALE_STRING - compare items as strings, based on the current locale. It uses the locale, which can be changed using setlocale()
+SORT_NATURAL - compare items as strings using "natural ordering" like natsort()
+SORT_FLAG_CASE - can be combined (bitwise OR) with SORT_STRING or SORT_NATURAL to sort strings case-insensitively
+*/
+<?php
+$fruits = array("lemon", "orange", "banana", "apple");
+sort($fruits);
+foreach ($fruits as $key => $val) {
+    echo "fruits[" . $key . "] = " . $val . "\n";
+}
+?>
+/*
+fruits[0] = apple
+fruits[1] = banana
+fruits[2] = lemon
+fruits[3] = orange
+*/
