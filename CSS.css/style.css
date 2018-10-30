@@ -1,0 +1,40 @@
+/******************************************
+   1. Background Position
+*******************************************/
+.el{
+background-position: 50% 50%;
+}
+left top
+left center
+left bottom
+right top
+right center
+right bottom
+center top
+center center
+center bottom
+50% 50%
+25% 75%
+10px 200px
+50px 50px
+initial
+
+
+/******************************************
+   2. background-attachment: scroll|fixed|local|initial|inherit;
+*******************************************/
+
+
+/******************************************
+   3. background-blend-mode: normal|multiply|screen|overlay|darken|lighten|color-dodge|saturation|color|luminosity;
+*******************************************/
+div {
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat, repeat;
+    background-image: url("img_tree.gif"), url("paper.gif");
+    background-blend-mode: lighten;
+}
+/******************************************
+   4. background-attachment: scroll|fixed|local|initial|inherit;
+*******************************************/
